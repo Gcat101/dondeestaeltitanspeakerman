@@ -13,4 +13,5 @@ jobs:
       - shell: bash
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-        run: curl -XPOST -H "Authorization: $DISCORD_TOKEN" -H "Content-type: application/json" -d '{"content": "test"}' 'https://canary.discord.com/api/v9/channels/1229481992480096319/messages'
+        run: |
+          curl -XPOST -H "Authorization: $DISCORD_TOKEN" -H "Content-type: application/json" -d '{"content": "test"}' 'https://canary.discord.com/api/v9/channels/1229481992480096319/messages'
