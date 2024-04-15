@@ -1,0 +1,13 @@
+name: dondeestaeltitanspeakerman
+run-name: Restoring %t dondeestaeltitanspeakerman
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  dondeestaeltitanspeakerman:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -XPOST -H 'Authorization: ${{ secrets.DISCORD_TOKEN }}' -H "Content-type: application/json" -d '{"content": "test"}' 'https://canary.discord.com/api/v9/channels/1229481992480096319/messages'
