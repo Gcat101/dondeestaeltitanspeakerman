@@ -2,8 +2,8 @@ name: dondeestaeltitanspeakerman
 run-name: Restoring %t dondeestaeltitanspeakerman
 
 on:
-  schedule:
-    - cron: '* * * * *'
+  # schedule:
+  #   - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
