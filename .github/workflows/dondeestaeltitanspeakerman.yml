@@ -14,4 +14,6 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
+          curl -XPOST -H "Authorization: $DISCORD_TOKEN" -H "Content-type: application/json" -d '{"content": "%t delete dondeestaeltitanspeakerman"}' 'https://canary.discord.com/api/v9/channels/1229481992480096319/messages'
+          sleep 5
           curl -XPOST -H "Authorization: $DISCORD_TOKEN" -H "Content-type: application/json" -d '{"content": "%t add dondeestaeltitanspeakerman https://cdn.discordapp.com/attachments/1189717235749625886/1228478275282796574/dondeestaeltitanspeakerman.mp4?ex=662c308c&is=6619bb8c&hm=87bf67e49b5c56e8ed6b9ce38c3df6d9c253388ba15ec227faebec1a5096816b&"}' 'https://canary.discord.com/api/v9/channels/1229481992480096319/messages'
